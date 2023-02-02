@@ -34,8 +34,9 @@ setup_helm_client() {
 
   PATH="$(pwd)/linux-amd64/:$PATH"
 
-  helm repo add stable https://chartmuseum.renait.nl/truecharts-stable
-  helm plugin install https://github.com/chartmuseum/helm-push
+  helm repo add truecharts-library https://library-charts.truecharts.org || true
+  helm repo add truecharts-stable https://chartmuseum.renait.nl/truecharts-stable || true
+  helm plugin install https://github.com/chartmuseum/helm-push | true
 }
 
 push_package() {
@@ -45,7 +46,7 @@ push_package() {
   else
     chart_package="$chart"
   fi
-  helm cm-push --debug -u "${HELM_REPO_USERNAME}" -p "${HELM_REPO_PASSWORD}" "${chart_package}" stable
+  helm cm-push --debug -u "${HELM_REPO_USERNAME}" -p "${HELM_REPO_PASSWORD}" "${chart_package}" truecharts-stable
 }
 
 sync_repo() {
@@ -56,7 +57,7 @@ sync_repo() {
   exit_code=0
 
   for dir in "$repo_dir"/*; do
-    if helm dependency update "$dir"; then
+    if helm dependency build --skip-refresh "$dir"; then
       if ! push_package "$dir"; then
         log_error "Problem pushing chart."
         exit_code=1
@@ -65,7 +66,11 @@ sync_repo() {
       log_error "Problem building dependencies. Skipping packaging of '$dir'."
       exit_code=1
     fi
+    rm -rf "$dir"/charts "$dir"/Chart.lock
   done
+
+  # delete packages
+  rm *.tgz
 
   return "$exit_code"
 }
