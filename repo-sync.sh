@@ -36,7 +36,7 @@ setup_helm_client() {
 
   helm repo add truecharts-library https://library-charts.truecharts.org || true
   helm repo add truecharts-stable https://chartmuseum.renait.nl/truecharts-stable || true
-  helm plugin install https://github.com/chartmuseum/helm-push | true
+  helm plugin install https://github.com/chartmuseum/helm-push || true
 }
 
 push_package() {
