@@ -18,11 +18,10 @@ maintainers:
 name: timetagger
 sources:
   - https://github.com/truecharts/charts/tree/master/charts/incubator/timetagger
-  - https://ghcr.com/ghcr.io/almarklein/timetagger
-  - ghcr.io/almarklein/timetagger
+  - https://ghcr.io/almarklein/timetagger
   - https://timetagger.app
   - https://github.com/almarklein/timetagger
-version: 2.0.12
+version: 2.0.13
 annotations:
   truecharts.org/catagories: |
     - utilities

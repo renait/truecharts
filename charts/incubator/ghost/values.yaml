@@ -1,6 +1,6 @@
 image:
   repository: tccr.io/truecharts/ghost
-  tag: 5.32.0@sha256:c8d870e4b351076b2c97a6106b44376ed516e763dc4ddd386329661be4b3fb24
+  tag: 5.33.8@sha256:8365e81edf0d79b92c8ebc2145449b7cde252cbc71850ada59fde58bc2efb6f3
   pullPolicy: IfNotPresent
 
 env:
