@@ -2,7 +2,7 @@ env: {}
 image:
   pullPolicy: IfNotPresent
   repository: tccr.io/truecharts/cryptpad
-  tag: latest@sha256:2d99ee4bded10b610afbac0bb8c1312ca021872b17bd7e5e39fc4d2779156f88
+  tag: latest@sha256:451d51f7b3808709ce0d63f9d6870b724f7b6ff5da7379ebab8cf1613d025393
 persistence:
   blobpath:
     enabled: true

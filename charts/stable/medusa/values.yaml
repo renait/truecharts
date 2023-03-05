@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/medusa
   pullPolicy: IfNotPresent
-  tag: 1.0.11@sha256:e5e45006cef701b151be9e66f87a8107421b86f7258805ae119e5ab84b5e3ec6
+  tag: 1.0.11@sha256:2927fc21669c739dceccd5b62e5fb5fa4305fdb1168311d809d47a1ac8eb9179
 
 securityContext:
   readOnlyRootFilesystem: false

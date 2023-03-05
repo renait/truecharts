@@ -1,6 +1,6 @@
 image:
   repository: tccr.io/truecharts/appsmith
-  tag: 1.9.7@sha256:04f2ec92e18823ece523f78b851d7217ec27318cb89038f8e623aff31e2b196c
+  tag: 1.9.9@sha256:94b8de0dc37e7d617d54bbac5a118772b8c7a988dcc0e5db9af870669c558794
   pullPolicy: IfNotPresent
 
 securityContext:

@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/hedgedoc
   pullPolicy: IfNotPresent
-  tag: 1.9.6@sha256:286e0480485121a831dd0dc4e6d62ad5fbbf66a8d8fe53a45dafacd42f5d9a9c
+  tag: 1.9.7@sha256:9e086ade3ada3ae0ef50dbd911d81fa4ce27ac5cb1131a5976c830fcfbc62b8d
 
 env:
   NODE_ENV: "production"

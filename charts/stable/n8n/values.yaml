@@ -1,6 +1,6 @@
 image:
   repository: tccr.io/truecharts/n8n
-  tag: 0.215.2@sha256:32bedd9e2ef587de7c0f0e52712161dbb41c76fb791b7f78353a66b10137b045
+  tag: 0.217.2@sha256:434415b8626909949a2a32bd9f5e175040464dc7e404ef9a1e08f44392b3474d
   pullPolicy: IfNotPresent
 
 securityContext:

@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/openspeedtest
   pullPolicy: IfNotPresent
-  tag: latest@sha256:c9c3251fc480049cd7041587b6b7ca8c87adac80ddba9e3a6dddf8e6e5feae9e
+  tag: latest@sha256:8f8be704ab215b8452a5627adf06e9a3294eaf6670af62097d5fabdcb06fbc06
 
 securityContext:
   readOnlyRootFilesystem: false

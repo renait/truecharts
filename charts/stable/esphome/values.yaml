@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/esphome
   pullPolicy: IfNotPresent
-  tag: 2022.12.8@sha256:3832c317a498dfa0f84d4a2d36cafb52fdf7d22a57e0dfaf148bf718c96faa2a
+  tag: 2023.2.4@sha256:c6c0f0ebc20c77d0a7fc1b32561ea524a13a6ef7df9b2a5947acddb1f305f46f
 
 # App needs to run as root because of this: https://github.com/esphome/issues/issues/2752
 securityContext:

@@ -1,6 +1,6 @@
 image:
   repository: tccr.io/truecharts/netbox
-  tag: 3.4.4@sha256:32936a9aff1e9e29f562480335dc091032ce3b2296231d936e8665357aae2c1f
+  tag: 3.4.5@sha256:62c56385e671cf7e3e1a783300aa6716f4f3074188f042b36923386a7c19c6c6
   pullPolicy: IfNotPresent
 
 securityContext:

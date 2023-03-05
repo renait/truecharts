@@ -4,7 +4,7 @@ image:
   pullPolicy: Always
 j19Image:
   repository: tccr.io/truecharts/minecraft-java19
-  tag: latest@sha256:8b9f7a6169c9ee827970779eace6c1681013e919cce13589156106ef1e5b30bc
+  tag: latest@sha256:912fadcab8e17dd6f4254e16f4c6de9eed68e23cafd35274d6ce9ade735bc334
   pullPolicy: Always
 j17j9Image:
   repository: tccr.io/truecharts/minecraft-java17-openj9

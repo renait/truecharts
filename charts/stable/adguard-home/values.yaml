@@ -1,6 +1,6 @@
 image:
   repository: tccr.io/truecharts/adguard-home
-  tag: 0.107.23@sha256:da8426088cf0345037e72dc0c53dbb98161839ad90f8f2485cb73de0339bdfc5
+  tag: 0.107.25@sha256:90e78953b5e15126b151ac655e37ad161bf5a6f10e2cdbb50da7f68166f57719
   pullPolicy: IfNotPresent
 
 # Those args are copied from the upstream Dockerfile.

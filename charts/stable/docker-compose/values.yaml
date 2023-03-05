@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/docker-in-docker
   pullPolicy: IfNotPresent
-  tag: 23.0.1@sha256:2e2d94c848703d58f1224fbbb8d464e4e3594eeaf3262b720c1bd30a8007cc8a
+  tag: 23.0.1@sha256:118421527d72dd07061e074781b8fee99bb6dc50c5f76e0453e69a1095c25bc2
 
 controller:
   # -- Set the controller type.

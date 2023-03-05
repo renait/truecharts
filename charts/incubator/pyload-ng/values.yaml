@@ -3,7 +3,7 @@ env:
 image:
   pullPolicy: IfNotPresent
   repository: tccr.io/truecharts/pyload-ng
-  tag: latest@sha256:b1b9fda75076beffdd57a16b4708fe9221602964131d1203df3e48c4a0a739cb
+  tag: latest@sha256:aace9a9083840d076b4cfce91e2ebe6a3a2bf659bf8f40204271636973bf2d76
 persistence:
   config:
     enabled: true

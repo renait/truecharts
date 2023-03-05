@@ -5,7 +5,7 @@ env:
 image:
   pullPolicy: IfNotPresent
   repository: tccr.io/truecharts/kdenlive
-  tag: latest@sha256:031b8624e3a0c310078197e029dc2f43b3e8e4e3a1ebaa6b73c0ed723d193316
+  tag: latest@sha256:659b44ed98b24ac44e46e399a2168fc8a2b850468b217c75f039f8b5308c7b51
 persistence:
   config:
     enabled: true

@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/beets
   pullPolicy: IfNotPresent
-  tag: v1.6.0@sha256:8f4e21b2eb22bc3cb1a29c370813ed11548bc2c57c042b3f1a58249205601b3b
+  tag: v1.6.0@sha256:de171595fca0f1de18a208dc5ca3f9de40a876df726c2a6744d5236e5e6e1778
 
 securityContext:
   readOnlyRootFilesystem: false

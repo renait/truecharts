@@ -1,6 +1,6 @@
 image:
   repository: tccr.io/truecharts/heimdall
-  tag: 2.5.5@sha256:c4582ec15fcd98ed5c1d665c564dca1cb1367b87d092cda503d9e27d9a3628d9
+  tag: 2.5.5@sha256:c429ef13bffdd55f184cf85acef5a002fdf656b5a03a06a7f4bb066fbe16671a
   pullPolicy: IfNotPresent
 
 securityContext:
