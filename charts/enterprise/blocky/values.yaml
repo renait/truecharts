@@ -140,6 +140,12 @@ bootstrapDns:
   # -- IP's linked to upstream DoT/DoH DNS name
   ips: []
 
+# -- set additional bootstrap dns (not needed, only used if bootstrapDns is set)
+additionalBootstrapDns:
+  []
+  # - upstream: ""
+  #   ips: []
+
 # -- Return empty answer for these queries
 filtering:
   # -- Ensures filtering by query type
@@ -319,7 +325,7 @@ metrics:
     # -- Enable and configure a Prometheus serviceMonitor for the chart under this key.
     # @default -- See values.yaml
     enabled: true
-    type: serviceMonitor
+    type: "servicemonitor"
     endpoints:
       - port: main
         path: /metrics
@@ -350,7 +356,7 @@ redis:
 queryLog:
   # optional one of: mysql, postgresql, csv, csv-client. If empty, log to console
   type: ""
-  # directory (should be mounted as volume in docker) for csv, db connection string for mysql/postgresql
+  # directory (should be mounted as volume in docker) for csv, db connection string for mysql, ignored for included postgresql
   # target: /var/log/something
   # postgresql target: postgres://user:password@db_host_or_ip:5432/db_name
   # if > 0, deletes log files which are older than ... days
@@ -362,6 +368,6 @@ queryLog:
 
 cnpg:
   main:
-    enabled: true
+    enabled: false
     user: blocky
     database: blocky

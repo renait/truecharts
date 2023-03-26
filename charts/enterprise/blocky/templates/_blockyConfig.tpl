@@ -10,7 +10,7 @@ data:
 {{- define "blocky.config" -}}
 redis:
   address: {{ printf "%v-%v" .Release.Name "redis" }}:6379
-  password: {{ .Values.redis.redisPassword | trimAll "\"" }}
+  password: {{ .Values.redis.creds.redisPassword | trimAll "\"" }}
   database: 0
   required: true
   connectionAttempts: 10
@@ -24,7 +24,7 @@ queryLog:
   # directory (should be mounted as volume in docker) for csv, db connection string for mysql/postgresql
   #postgresql target: postgres://user:password@db_host_or_ip:5432/db_name
   {{- if eq .Values.queryLog.type "postgresql" }}
-  target: {{ .Values.cnpg.creds.std }}
+  target: {{ .Values.cnpg.main.creds.std }}
   {{- else }}
   target: {{ .Values.queryLog.target }}
   {{- end }}
@@ -99,15 +99,25 @@ hostsFile:
 
 {{- if or .Values.bootstrapDns.upstream .Values.bootstrapDns.ips }}
 bootstrapDns:
-{{- if .Values.bootstrapDns.upstream }}
-  upstream: {{ .Values.bootstrapDns.upstream }}
-{{- end }}
-{{- if .Values.bootstrapDns.ips }}
-  ips:
-{{- range $id, $value := .Values.bootstrapDns.ips }}
-    - {{ $value }}
-{{- end }}
-{{- end }}
+  {{- if .Values.bootstrapDns.upstream }}
+  - upstream: {{ .Values.bootstrapDns.upstream }}
+  {{- end }}
+  {{- if .Values.bootstrapDns.ips }}
+    ips:
+    {{- range $id, $value := .Values.bootstrapDns.ips }}
+      - {{ $value }}
+    {{- end }}
+  {{- end }}
+  {{/* Add additional Bootstrap DNS */}}
+  {{- range .Values.additionalBootstrapDns }}
+  {{- with .upstream }}
+  - upstream: {{ . }}
+  {{- end }}
+  {{- range $id, $value := .ips }}
+    ips:
+      - {{ $value }}
+  {{- end }}
+  {{- end }}
 {{- end }}
 
 {{- if or .Values.filtering.filtering }}

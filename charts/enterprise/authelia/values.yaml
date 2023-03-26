@@ -5,6 +5,8 @@ image:
 
 workload:
   main:
+    replicas: 2
+    strategy: RollingUpdate
     podSpec:
       containers:
         main:
@@ -13,18 +15,18 @@ workload:
           envFrom:
             - configMapRef:
                 name: authelia-paths
-          # probes:
-          #   liveness:
-          #     type: HTTP
-          #     path: /api/health"
+          probes:
+            liveness:
+              type: http
+              path: "/api/health"
 
-          #   readiness:
-          #     type: HTTP
-          #     path: "/api/health"
+            readiness:
+              type: http
+              path: "/api/health"
 
-          #   startup:
-          #     type: HTTP
-          #     path: "/api/health"
+            startup:
+              type: http
+              path: "/api/health"
 
 service:
   main:
@@ -122,6 +124,15 @@ duo_api:
   hostname: api-123456789.example.com
   integration_key: ABCDEF
   plain_api_key: ""
+
+## NTP settings
+
+ntp:
+  address: "time.cloudflare.com:123"
+  version: 4
+  max_desync: 3s
+  disable_startup_check: false
+  disable_failure: true
 
 ##
 ## Authentication Backend Provider Configuration

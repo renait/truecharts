@@ -1,13 +1,8 @@
 # Include{groups}
 portals:
   open:
-    protocols:
-      - "http"
-    host:
-        - "$kubernetes-resource_configmap_portal_host"
-    ports:
-      - "$kubernetes-resource_configmap_portal_port"
-    path: "/dashboard/"
+# Include{portalLink}
+    path: "$kubernetes-resource_configmap_tcportal-open_path"
 questions:
 # Include{global}
 # Include{workload}
@@ -395,6 +390,8 @@ questions:
                   default: 568
 
 # Include{resources}
+# Include{metrics}
+# Include{prometheusRule}
 # Include{advanced}
 # Include{addons}
 # Include{codeserver}

@@ -1,4 +1,7 @@
 {{/* Make sure all variables are set properly */}}
+{{- if eq .Values.queryLog.type "postgresql" -}}
+  {{- $_ := set .Values.cnpg.main "enabled" true -}}
+{{- end }}
 {{- include "tc.v1.common.loader.init" . }}
 
 
@@ -27,12 +30,16 @@ subPath: config.yml
 {{- define "k8sgateway.configvolume" -}}
 enabled: true
 type: configmap
-mountPath: "/etc/coredns"
 objectName: corefile
-readOnly: true
 items:
    - key: Corefile
      path: Corefile
+targetSelector:
+  main:
+    k8sgateway:
+      mountPath: "/etc/coredns"
+      readOnly: true
+
 {{- end -}}
 
 {{- $_ := set .Values.persistence "tc-config" (include "blocky.configmap.mount" . | fromYaml) -}}

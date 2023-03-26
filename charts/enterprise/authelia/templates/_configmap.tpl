@@ -34,14 +34,21 @@ data:
     ---
     theme: {{ default "light" .Values.theme }}
     default_redirection_url: {{ default (printf "https://www.%s" .Values.domain) .Values.default_redirection_url }}
+    ntp:
+      address:  {{ default "time.cloudflare.com:123" .Values.ntp.address }}
+      version: {{ default 4 .Values.ntp.version }}
+      max_desync: {{ default "3s" .Values.ntp.max_desync }}
+      disable_startup_check: {{ default false .Values.ntp.disable_startup_check }}
+      disable_failure: {{ default true .Values.ntp.disable_failure }}
     server:
       host: 0.0.0.0
       port: {{ default 9091 .Values.server.port }}
       {{- if not (eq "" (default "" .Values.server.path)) }}
       path: {{ .Values.server.path }}
       {{- end }}
-      read_buffer_size: {{ default 4096 .Values.server.read_buffer_size }}
-      write_buffer_size: {{ default 4096 .Values.server.write_buffer_size }}
+      buffers:
+        write: {{ default 4096 .Values.server.write_buffer_size }}
+        read: {{ default 4096 .Values.server.read_buffer_size }}
       enable_pprof: {{ default false .Values.server.enable_pprof }}
       enable_expvars: {{ default false .Values.server.enable_expvars }}
     log:
@@ -62,7 +69,8 @@ data:
     {{- end }}
     {{- with $auth := .Values.authentication_backend }}
     authentication_backend:
-      disable_reset_password: {{ $auth.disable_reset_password }}
+      password_reset:
+        disable: {{ $auth.disable_reset_password }}
     {{- if $auth.file.enabled }}
       file:
         path: {{ $auth.file.path }}
@@ -120,7 +128,7 @@ data:
       remember_me_duration: {{ default "1M" $session.remember_me_duration }}
     {{- end }}
       redis:
-        host: {{ .Values.redis.url.plain }}
+        host: {{ .Values.redis.creds.plain }}
       {{- with $redis := .Values.redisProvider }}
         port: {{ default 6379 $redis.port }}
         {{- if not (eq $redis.username "") }}
@@ -153,7 +161,8 @@ data:
         database: {{ default "authelia" $storage.postgres.database }}
         username: {{ default "authelia" $storage.postgres.username }}
         timeout: {{ default "5s" $storage.postgres.timeout }}
-        sslmode: {{ default "disable" $storage.postgres.sslmode }}
+        ssl:
+          mode: {{ default "disable" $storage.postgres.sslmode }}
     {{- end }}
     {{- with $notifier := .Values.notifier }}
     notifier:
