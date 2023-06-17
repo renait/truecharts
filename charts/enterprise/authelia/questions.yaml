@@ -12,6 +12,7 @@ questions:
 # Include{containerBasic}
 # Include{containerAdvanced}
 # Include{containerConfig}
+# Include{podOptions}
   - variable: domain
     group: "App Configuration"
     label: "Domain"
@@ -742,7 +743,6 @@ questions:
                               default: 9091
                               required: true
 # Include{serviceExpertRoot}
-            default: false
 # Include{serviceExpert}
 # Include{serviceList}
 # Include{persistenceRoot}
@@ -765,6 +765,7 @@ questions:
 # Include{ingressDefault}
 # Include{ingressTLS}
 # Include{ingressTraefik}
+# Include{ingressAdvanced}
 # Include{ingressList}
 # Include{securityContextRoot}
               - variable: runAsUser

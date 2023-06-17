@@ -1,19 +1,17 @@
 image:
   repository: tccr.io/truecharts/tautulli
   pullPolicy: IfNotPresent
-  tag: 2.11.1@sha256:8a3dcdd6c402829c497950eed48d88f22ed8a721fa4e87a1c0826b45352388bf
-
+  tag: v2.12.4@sha256:c6ad6c0f8a5205e9d79d9afae6c7d0b3d0e586fa6500526f09433984090e57fd
 service:
   main:
     ports:
       main:
         port: 8181
         targetPort: 8181
-
 persistence:
   config:
     enabled: true
     mountPath: "/config"
-
 portal:
-  enabled: true
+  open:
+    enabled: true

@@ -1,68 +1,68 @@
 image:
   repository: tccr.io/truecharts/jupyter-base
   pullPolicy: IfNotPresent
-  tag: v2023-02@sha256:5ecd118b72b7776fd4ebb224951659c27c13241cb5b1c2f76fd0a88eda825f8e
+  tag: v2023-05@sha256:c525c6af572a075ad7d07ec482f35f6f3d422efb40b287315d64e51a09c7117a
 minimalImage:
   repository: tccr.io/truecharts/jupyter-minimal
   pullPolicy: IfNotPresent
-  tag: v2023-02@sha256:8d304f2278b4290be9bfbc74c39217fcb685f4ec8db819ba758b470b610a666a
+  tag: v2023-05@sha256:17fb433dea9bbfd1c642fc71b151a9569412309d91731ae1ac297712cabba63d
 rImage:
   repository: tccr.io/truecharts/jupyter-r
   pullPolicy: IfNotPresent
-  tag: v2023-02@sha256:eae18e0088945f90e33b828e0495d7f369fc0e39e48ab6b66ebc42482ba135a0
+  tag: v2023-06@sha256:c66b288b1f23fa1dced7952de77e2439ae5f2c955933a32327d5a5073c8c4ac2
 scipyImage:
   repository: tccr.io/truecharts/jupyter-scipy
   pullPolicy: IfNotPresent
-  tag: v2023-02@sha256:d5ddd03802ac329fc9fa64f933367e455fbcd6bbcd686aae1a4e200fbed26421
+  tag: v2023-06@sha256:656b6468998dfb5f814717da8b921f15bb4842c961518cca7035524824d9b83f
 tensorflowImage:
   repository: tccr.io/truecharts/jupyter-tensorflow
   pullPolicy: IfNotPresent
-  tag: v2023-02@sha256:3de87e752abdb676eb6882a51819c0ea24e78b107837a2723ed9175e8a13569a
+  tag: v2023-06@sha256:d90b23fa8d252af4c7f6718933699969901907dd032bac9680dc84abf4b304c7
 datascienceImage:
   repository: tccr.io/truecharts/jupyter-datascience
   pullPolicy: IfNotPresent
-  tag: v2023-02@sha256:4d616ad831c1fe374d4c2c60a2c9d393d1719d5cbb163f7c5405960cdfa73d91
+  tag: v2023-05@sha256:21eadc0a62c4c888ce9f18cfb45c6b78f8d74800e77fd5e69f855150e0018e0f
 pysparkImage:
   repository: tccr.io/truecharts/jupyter-pyspark
   pullPolicy: IfNotPresent
-  tag: v2023-02@sha256:b7bac31b159a5d4d40159068aab3f28ce9b6cdebe3b6b9c54862b7db13ee215c
+  tag: v2023-06@sha256:9fab7f092b307027523e22572586f43bbcc5f0031680d870aa432f22dd4c82ee
 allsparkImage:
   repository: tccr.io/truecharts/jupyter-all-spark
   pullPolicy: IfNotPresent
-  tag: v2023-02@sha256:fe321309b5a660918a6a77928e59b67a33d6b881aeebfc215e0a22fe80e63eb0
-
-securityContext:
-  readOnlyRootFilesystem: false
-  runAsNonRoot: false
-
-podSecurityContext:
-  runAsUser: 0
-  runAsGroup: 0
-
+  tag: v2023-05@sha256:19d67f286692966e1871aa70aa544d53bc84ca18b70f7a05b33d399ee25f6ff6
 jupyter:
   jupyter_cmd: lab
   restartable: true
-
-env:
-  NB_UID: "{{ .Values.security.PUID }}"
-  NB_GID: "{{ .Values.podSecurityContext.fsGroup }}"
-  NB_UMASK: "{{ .Values.security.UMASK }}"
-  # User Defined
-  DOCKER_STACKS_JUPYTER_CMD: "{{ .Values.jupyter.jupyter_cmd }}"
-  RESTARTABLE: '{{ ternary "yes" "no" .Values.jupyter.restartable }}'
-
 service:
   main:
     ports:
       main:
         port: 10300
-        protocol: HTTP
+        protocol: http
         targetPort: 8888
-
 persistence:
   data:
     enabled: true
     mountPath: /home/jovyan/work
-
 portal:
-  enabled: true
+  open:
+    enabled: true
+securityContext:
+  container:
+    readOnlyRootFilesystem: false
+    runAsNonRoot: false
+    runAsUser: 0
+    runAsGroup: 0
+workload:
+  main:
+    podSpec:
+      containers:
+        main:
+          imageSelector: image
+          env:
+            NB_UID: "{{ .Values.securityContext.container.PUID }}"
+            NB_GID: "{{ .Values.securityContext.pod.fsGroup }}"
+            NB_UMASK: "{{ .Values.securityContext.container.UMASK }}"
+            # User Defined
+            DOCKER_STACKS_JUPYTER_CMD: "{{ .Values.jupyter.jupyter_cmd }}"
+            RESTARTABLE: '{{ ternary "yes" "no" .Values.jupyter.restartable }}'

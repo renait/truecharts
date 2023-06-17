@@ -1,29 +1,46 @@
 image:
   repository: tccr.io/truecharts/firefox
   pullPolicy: IfNotPresent
-  tag: 101.0.1@sha256:1a626e0206b7b6ca51265d45ad39c233d725a940cfa0b507fc3c76831761169f
+  tag: v113.0.2@sha256:b160950845be157399b25557b6ddbbd79ee2911222085a90dc59b7a60cf302bf
 
 securityContext:
-  runAsNonRoot: false
-  readOnlyRootFilesystem: false
-
-podSecurityContext:
-  runAsUser: 0
-  runAsGroup: 0
+  container:
+    readOnlyRootFilesystem: false
+    runAsNonRoot: false
+    runAsUser: 0
+    runAsGroup: 0
 
 service:
   main:
     ports:
       main:
-        targetPort: 3000
+        protocol: http
         port: 10131
+
+workload:
+  main:
+    podSpec:
+      containers:
+        main:
+          probes:
+            liveness:
+              type: http
+            readiness:
+              type: http
+            startup:
+              type: http
+          env:
+            FM_HOME: "/config"
+            CUSTOM_PORT: "{{ .Values.service.main.ports.main.port }}"
+            TITLE: "TrueChartVNC Client"
 
 persistence:
   config:
     enabled: true
-    mountPath: "/config"
+    mountPath: /config
   varrun:
-    enabled: true
+    enabled: false
 
 portal:
-  enabled: true
+  open:
+    enabled: true

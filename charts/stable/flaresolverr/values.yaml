@@ -1,15 +1,14 @@
 image:
   repository: tccr.io/truecharts/flaresolverr
   pullPolicy: IfNotPresent
-  tag: 3.0.2@sha256:615e77295ddc6c4c204c59695f5ffd6fc9859d7de2204253434193f0d64aedaa
+  tag: v3.2.1@sha256:6c38830efb22b3807e4503736642a91edd5c6c7f6f64265176e51d8c28a20b9b
 
 securityContext:
-  readOnlyRootFilesystem: false
-  runAsNonRoot: false
-
-podSecurityContext:
-  runAsUser: 0
-  runAsGroup: 0
+  container:
+    readOnlyRootFilesystem: false
+    runAsNonRoot: false
+    runAsUser: 0
+    runAsGroup: 0
 
 service:
   main:
@@ -21,7 +20,8 @@ service:
 persistence:
   config:
     enabled: true
-    mountPath: "/config"
+    mountPath: /config
 
 portal:
-  enabled: true
+  open:
+    enabled: true

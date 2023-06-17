@@ -23,6 +23,7 @@
               - variable: openvpn
                 label: OpenVPN Settings
                 schema:
+                  additional_attrs: true
                   type: dict
                   show_if: [["type", "=", "openvpn"]]
                   attrs:
@@ -37,11 +38,13 @@
                       description: Authentication Credentials
                       schema:
                         type: string
+                        show_if: [["username", "!=", ""]]
                         default: ""
                         required: true
               - variable: tailscale
                 label: Tailscale Settings
                 schema:
+                  additional_attrs: true
                   type: dict
                   show_if: [["type", "=", "tailscale"]]
                   attrs:
@@ -168,3 +171,4 @@
                             schema:
                               type: string
                               required: true
+                              max_length: 10240

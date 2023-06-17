@@ -56,6 +56,7 @@ questions:
 
 
 # Include{containerConfig}
+# Include{podOptions}
 # Include{serviceRoot}
         - variable: main
           label: "Main Service"
@@ -80,7 +81,6 @@ questions:
                               default: 10038
                               required: true
 # Include{serviceExpertRoot}
-            default: false
 # Include{serviceExpert}
 # Include{serviceList}
 # Include{persistenceRoot}
@@ -103,6 +103,7 @@ questions:
 # Include{ingressDefault}
 # Include{ingressTLS}
 # Include{ingressTraefik}
+# Include{ingressAdvanced}
 # Include{ingressList}
 # Include{securityContextRoot}
 
@@ -130,7 +131,6 @@ questions:
 
 # Include{resources}
 # Include{metrics}
-# Include{prometheusRule}
 # Include{prometheusRule}
 # Include{advanced}
 # Include{addons}

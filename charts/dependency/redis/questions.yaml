@@ -11,6 +11,7 @@ questions:
 # Include{containerAdvanced}
 
 # Include{containerConfig}
+# Include{podOptions}
   - variable: redisPassword
     group: "App Configuration"
     label: "Redis Password"
@@ -42,7 +43,6 @@ questions:
                               default: 6379
                               required: true
 # Include{serviceExpertRoot}
-            default: false
 # Include{serviceExpert}
 # Include{serviceList}
 # Include{vctRoot}

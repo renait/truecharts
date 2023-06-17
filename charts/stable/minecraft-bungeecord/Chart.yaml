@@ -3,9 +3,9 @@ appVersion: "2022.4.1"
 dependencies:
   - name: common
     repository: https://library-charts.truecharts.org
-    version: 11.1.2
+    version: 12.14.2
 deprecated: false
-description: A Spigot BungeeCord server.
+description: the front-end of a cluster of minecraft-java containers.
 home: https://truecharts.org/charts/stable/minecraft-bungeecord
 icon: https://truecharts.org/img/hotlink-ok/chart-icons/minecraft-bungeecord.png
 keywords:
@@ -22,10 +22,9 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/minecraft-bungeecord
   - https://github.com/itzg/docker-bungeecord
 type: application
-version: 3.0.8
+version: 4.1.2
 annotations:
   truecharts.org/catagories: |
     - proxy
     - minecraft
   truecharts.org/SCALE-support: "true"
-  truecharts.org/grade: U

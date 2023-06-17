@@ -1,13 +1,12 @@
 image:
   repository: tccr.io/truecharts/unifi
-  tag: 7.3.76@sha256:1c550120dd2bb462f16bac6a54bee03be500c5118ab86bd4904a18143ea97bac
+  tag: v7.4.156@sha256:cda7bd9eee19597e363bc7c3fc3ac80796a616e6c3e079e14f411fd4197e8124
   pullPolicy: IfNotPresent
-
 service:
   main:
     ports:
       main:
-        protocol: HTTPS
+        protocol: https
         port: 8443
         targetPort: 8443
   comm:
@@ -24,7 +23,7 @@ service:
         enabled: true
         port: 3478
         targetPort: 3478
-        protocol: UDP
+        protocol: udp
   speedtest:
     enabled: true
     ports:
@@ -39,26 +38,27 @@ service:
         enabled: true
         port: 8880
         targetPort: 8880
-        protocol: HTTP
+        protocol: http
       websecure:
         enabled: true
         port: 8843
         targetPort: 8843
-        protocol: HTTPS
-
-securityContext:
-  readOnlyRootFilesystem: false
-
-podSecurityContext:
-  runAsGroup: 999
-  runAsUser: 999
-
-env: {}
-
+        protocol: https
 persistence:
   config:
     enabled: true
     mountPath: "/unifi"
-
 portal:
-  enabled: true
+  open:
+    enabled: true
+securityContext:
+  container:
+    readOnlyRootFilesystem: false
+    runAsGroup: 999
+    runAsUser: 999
+workload:
+  main:
+    podSpec:
+      containers:
+        main:
+          env: {}
