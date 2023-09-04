@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/embystat
   pullPolicy: IfNotPresent
-  tag: v0.2.0@sha256:d7ce5a5f7f22bd714e58e4b7bc3afe611c47a5cc57d2eac153ec53de45917e4c
+  tag: v0.2.0@sha256:e47e2d418904af52250a06b5ad0d1423ec015a4829eb23bfc315ebdba1940c83
 
 securityContext:
   container:

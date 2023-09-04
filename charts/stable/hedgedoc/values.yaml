@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/hedgedoc
   pullPolicy: IfNotPresent
-  tag: v1.9.8@sha256:4408a6554f55dbfd9e1c877c61a8f48213b884ca947692009a73179611acb661
+  tag: v1.9.9@sha256:5ddb32a8778eca2017a5895fc96ef3453428d0eef798eedeb836857b8e73bc2e
 service:
   main:
     ports:

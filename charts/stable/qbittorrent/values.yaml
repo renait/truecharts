@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/qbittorrent
   pullPolicy: IfNotPresent
-  tag: v4.5.3@sha256:bff6c96a4c81d9f788b135a3055f92bcfd922470598849608233eafddb158016
+  tag: v4.5.5@sha256:9a742beca8517e74a7aa050bdc7bc7e1b502aa94fbe1aea7710bdaaddd028753
 service:
   main:
     ports:

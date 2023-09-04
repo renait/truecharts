@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/dillinger
   pullPolicy: IfNotPresent
-  tag: v3.39.1@sha256:d891b86eb8b34167e0a6efeb0373426b21dae55db6c246e492a589fd10843081
+  tag: v3.39.1@sha256:10f9b77c4804efb4b05d5de8f1ea46a05e70c401c94123899d2389f816d9b7bf
 
 securityContext:
   container:

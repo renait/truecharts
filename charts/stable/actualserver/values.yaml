@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/actualserver
   pullPolicy: IfNotPresent
-  tag: v23.5.0@sha256:1ffba33ab2a27a6c9257cdee6159ae9623049b2f667ec2a5e7c2d0d91add385f
+  tag: v23.8.1@sha256:a723caf9109203650c37d756bb9f8c04a636212734431cc230894a0c46a29920
 
 securityContext:
   container:

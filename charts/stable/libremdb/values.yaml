@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/libremdb
   pullPolicy: IfNotPresent
-  tag: latest@sha256:7fb5d2e804ec84b8246a23ef03425f5473b0113e479bca00f85d8a27fdeb5cf8
+  tag: latest@sha256:8fe47de0e52ca0cd68dd1c6fd89c6a1b6ac3c7fcc1cb50e89102f38762b7d92e
 service:
   main:
     ports:
@@ -15,6 +15,7 @@ persistence:
     mountPath: /opt/app
 redis:
   enabled: true
+  redisUsername: default
 
 portal:
   open:

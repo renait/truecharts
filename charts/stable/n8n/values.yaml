@@ -1,6 +1,6 @@
 image:
   repository: tccr.io/truecharts/n8n
-  tag: v0.232.0@sha256:f9236a9194e77494ac52177c018133754de14a82187145667746e1fdc1308a2e
+  tag: v1.4.1@sha256:3ee5e5aee787366783d468238c327e298a27c03c520d75ea8f74dd95ea148f4f
   pullPolicy: IfNotPresent
 timezoneandlocale: {}
 # N8N_DEFAULT_LOCALE: "en"

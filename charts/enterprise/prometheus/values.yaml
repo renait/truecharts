@@ -1,6 +1,6 @@
 image:
   repository: tccr.io/truecharts/prometheus
-  tag: v2.44.0@sha256:2831ad2ac03cd4f953793e6ced89bb5cddf02ec0df8332d77b65dd185dd11153
+  tag: v2.46.0@sha256:0b0dc821c06967e8562bf32ebd9055eef7f1ddd8851187acbf8871d8bd9c72a3
 
 thanosImage:
   repository: tccr.io/truecharts/thanos
@@ -515,6 +515,14 @@ prometheus:
   ## See https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/api.md#namespaceselector for usage
   ##
   probeNamespaceSelector: {}
+  ## @param prometheus.scrapeConfigSelector The scrapeConfigs to be selected for target discovery.
+  ## If {}, select all scrapeConfigs
+  ##
+  scrapeConfigSelector: {}
+  ## @param prometheus.scrapeConfigNamespaceSelector Namespaces to be selected for scrapeConfig discovery.
+  ## If {}, select all namespaces.
+  ## If nil, select own namespace.
+  scrapeConfigNamespaceSelector: {}
   ## @param prometheus.retention Metrics retention days
   ##
   retention: 31d

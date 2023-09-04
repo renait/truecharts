@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/dokuwiki
   pullPolicy: IfNotPresent
-  tag: 20220731.1.0@sha256:d356cde2cb0a85e61cbe5fab179f6222d55acdd8de43cbec00559e0a4e00d473
+  tag: v20230404.1.0@sha256:96b56d9b2ce0b6970ef492aa44cb19809451a532f45e1334ac8bdf95dc2121af
 
 securityContext:
   container:

@@ -1,6 +1,6 @@
 image:
   repository: tccr.io/truecharts/fileflows
-  tag: v23.06.3@sha256:b6369e2d486b196f0dcbadb2d92df6d10d5f901061427f7894979953ac83e228
+  tag: v23.07.3@sha256:30a36375cec6d2eeced824eb215103bc5f37420beb7f2727b4b214797ba352f6
   pullPolicy: IfNotPresent
 
 securityContext:

@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/alist
   pullPolicy: IfNotPresent
-  tag: v3.18.0@sha256:518972ab25493f29385ac884c19952ab285dfa0d6f4453634ea35e76b870a1b7
+  tag: v3.26.0@sha256:3647771df46d031cb22a01fc8a2d383b033b2e204811e54e62427fc464be546a
 
 securityContext:
   container:

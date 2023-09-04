@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/quassel-core
   pullPolicy: IfNotPresent
-  tag: v0.14.0@sha256:9b736ae66f583b279f5d09c363837f512d589b1ba4d736b40d533f953e7277e4
+  tag: v0.14.0@sha256:23fbce05cddd188d56f3433699942d926168fca5ad894b3dc2ace54b85063b74
 service:
   main:
     ports:

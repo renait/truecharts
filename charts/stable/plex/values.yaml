@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/plex
   pullPolicy: IfNotPresent
-  tag: v1.32.3.7192@sha256:35801fabfaa12ada9ce6831dc87d8c4a6b1944becd6d860a4c2b424b961ffb72
+  tag: v1.32.5.7349@sha256:b7c14cc29d7edc916488519677a6999814a4c12a18bd70293a5ca8cad1980a90
 service:
   main:
     ports:

@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/tvheadend
   pullPolicy: IfNotPresent
-  tag: latest@sha256:c108412b5a0783fc511264e8b766ccc7540b8e8372438be7baddaebe5ca1f7ad
+  tag: latest@sha256:1451fb4d89293cfee2b4d63953f739766368c231a49aac6dacb6fcbaa99b705c
 service:
   main:
     ports:

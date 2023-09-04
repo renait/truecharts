@@ -1,7 +1,7 @@
 image:
   pullPolicy: IfNotPresent
   repository: tccr.io/truecharts/adminer
-  tag: latest@sha256:df93d7ae1e57c4201491961d9f2b23ccafa7a2cb0706dc50c124ade3ab65ece1
+  tag: latest@sha256:637ca86631ab3222c609e8f88a6efb1ef6c0dc69121ea1e3863428f5fed7f05a
 
 securityContext:
   container:

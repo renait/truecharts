@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/mstream
   pullPolicy: IfNotPresent
-  tag: v5.11.4@sha256:7ddceea63221365dddd80645e58958297baded63e9df5c46892a20fe55a3f593
+  tag: v5.11.4@sha256:4b93c2a2d34d409b112852a77d1deb452d29fd2d4fc85bb48f01773642d28acf
 service:
   main:
     ports:

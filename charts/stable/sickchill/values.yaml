@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/sickchill
   pullPolicy: IfNotPresent
-  tag: v2023.5.30@sha256:383c45d8ff29639fb0b86e447d5fbe76f13b8087581ea3ba09807329fc479454
+  tag: v2023.6.27@sha256:a0f415f43114e2e2515e74b45c38e4a9cd82c8036f3ea8cb7acc367ea27445f8
 service:
   main:
     ports:

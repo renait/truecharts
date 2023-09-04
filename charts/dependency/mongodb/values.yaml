@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/mongodb
   pullPolicy: IfNotPresent
-  tag: v6.0.6@sha256:a20fb1417a21d8ea1f4bf9d5896b4c2d69ac71b951884378666c77ec47b21ea8
+  tag: v6.0.9@sha256:91c21920a23eda2b6658b6feb52ff2401f23f7c2886ffe77982c2ef2c1968018
 
 workload:
   main:

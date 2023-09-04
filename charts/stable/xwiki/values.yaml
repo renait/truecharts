@@ -1,6 +1,6 @@
 image:
   repository: tccr.io/truecharts/xwiki
-  tag: v15.4.0-postgres@sha256:fd25048596148ebdbfcee552b79fbe83b3ff3914840599fde390736c02f6ea0a
+  tag: v15.7.0-postgres@sha256:a17e3e1dae69f80fb721712fb229f06ad4b19c97ccb2fde61bca849ab4991dc6
   pullPolicy: IfNotPresent
 service:
   main:

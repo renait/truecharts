@@ -1,6 +1,6 @@
 image:
   repository: tccr.io/truecharts/snapdrop
-  tag: latest@sha256:e40767af676a9f0c4e6ddfd9ccff0fd841f8d7b0ad4c5387f52608348dc801ef
+  tag: latest@sha256:d5b4f03fd73186d5238770bedf0edd9db1c3b1cbb9ec5e3c2284b7afd255dcc5
   pullPolicy: IfNotPresent
 service:
   main:

@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/booksonic-air
   pullPolicy: IfNotPresent
-  tag: v2201.1.0@sha256:0843f1baa37d2244a65c9b8de18547f50db4c90a21ba52b78400d42b519e4c78
+  tag: v2201.1.0@sha256:930af8e995116624ef6a04c3266ac0e602beaa8eb9befc6eb98ecbeb20146500
 
 securityContext:
   container:

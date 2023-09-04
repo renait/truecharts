@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/docker-in-docker
   pullPolicy: IfNotPresent
-  tag: v23.0.6@sha256:fa88f63da1fbb10e9cd7e51dc9f30d250f5ddc366ea77c6a227f9ab7a3446d7d
+  tag: v24.0.5@sha256:ccdca118134de2f59475b654b8441746e723c40541b4ee57f58723aa252ba641
 hostNetwork: true
 
 securityContext:

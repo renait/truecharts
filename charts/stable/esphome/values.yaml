@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/esphome
   pullPolicy: IfNotPresent
-  tag: v2023.5.5@sha256:03474637672bf25ffedfa6a5f208ddd7f5bf6dc1edf8e6e0284df436f4c1f02f
+  tag: v2023.8.2@sha256:943a756d843d71eea156c59fc5fbbf4e4e923e67daeeeb2122046cdb36f8be6a
 
 securityContext:
   container:
