@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/slash
   pullPolicy: IfNotPresent
-  tag: v0.4.3@sha256:ee931b868fab72d2aaa218837039ee3fcced6817596cac500f3878e780152b60
+  tag: v0.4.4@sha256:680a076c64c2a33ad01502360218e43aec4c179fe2541a87f7531b78ff528979
 
 service:
   main:

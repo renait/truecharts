@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/projectsend
   pullPolicy: IfNotPresent
-  tag: vlatest@sha256:54b84b8100910556fc8f504eab6136526342a5a81ee2eab5e4f80e53cc25e40f
+  tag: vlatest@sha256:1b1cc8e0388d111d113842ea02f1cb76c2c77e223e2054a640aa58871a5e0098
 
 securityContext:
   container:
@@ -43,11 +43,11 @@ workload:
             - -c
           args:
             - |-
-              export configFile="/config/includes/sys.config.php";
+              export configFile="/app/www/public/includes/sys.config.php";
               if [ ! -f $configFile ];
               then
                 echo "Creating initial config file...";
-                mkdir -p /config/includes;
+                mkdir -p /config/projectsend;
                 touch $configFile;
                 echo "<?php" >> $configFile;
                 echo "# This is generated on initial setup of this TrueCharts App" >> $configFile;

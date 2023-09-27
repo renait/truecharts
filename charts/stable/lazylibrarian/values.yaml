@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/lazylibrarian
   pullPolicy: IfNotPresent
-  tag: latest@sha256:4d3c5d3225db3360edc7019212ef68cb2b5c11063089dde1873c09ca613ad02f
+  tag: latest@sha256:06a070a0c2754dba516dda1cd7bbb7589e422411be2798b1e09c00c8f0f5366e
 service:
   main:
     ports:

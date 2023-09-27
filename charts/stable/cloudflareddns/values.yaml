@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/cloudflareddns
   pullPolicy: IfNotPresent
-  tag: latest@sha256:f553567b13c39573137e33230077f63f11868f0c7b4b7a3b2039bdc899e85c1f
+  tag: latest@sha256:33d3809f34e95d75cee944983813190671851ee6c7cece0d77ddc8d09bb0bb28
 
 securityContext:
   container:

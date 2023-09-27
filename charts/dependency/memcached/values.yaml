@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/memcached
   pullPolicy: IfNotPresent
-  tag: v1.6.21@sha256:117c7f246c0854b46f655a73f411f418e8f78a50cafec5e92d6ebfdb49319331
+  tag: v1.6.21@sha256:10b019d09f52656697c19bb98b0cd0753290ad7695776bcd7bb0dbdaa1ae1bea
 
 service:
   main:

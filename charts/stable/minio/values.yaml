@@ -1,6 +1,6 @@
 image:
   repository: tccr.io/truecharts/minio
-  tag: latest@sha256:1c624c4d395a9b26a871cca4433585896ad06b0d99bcd3bbecd9b194e56b5601
+  tag: latest@sha256:23c20dd3b27942b58196019b070e36ff2740576ad53b3f9831b3f4252a2f9c09
   pullPolicy: IfNotPresent
 service:
   main:

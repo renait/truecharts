@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/emulatorjs
   pullPolicy: IfNotPresent
-  tag: v1.7.2@sha256:c474610c5d5a2b38e593746c4c3aa0dde323ac68281c14b07e800be8da25f693
+  tag: v1.7.2@sha256:4caa6318a768251143a001fd140f98138a24e7fa992c50016bd6ca04065861f0
 
 securityContext:
   container:

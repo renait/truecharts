@@ -1,6 +1,6 @@
 image:
   repository: tccr.io/truecharts/calibre
-  tag: v6.25.0@sha256:d769d1780fd1b63a52e8650b1d04cffc30d4578b7c0331a944443bef00fde928
+  tag: v6.27.0@sha256:1ec2bf24ecdbb379ff2580de266a5f8c0784538091c1dd626103be62484df78c
   pullPolicy: IfNotPresent
 
 securityContext:

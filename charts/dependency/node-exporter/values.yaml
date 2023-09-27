@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/node-exporter
   pullPolicy: IfNotPresent
-  tag: v1.6.1@sha256:0672c1a846be61018b11cd88ce0df3629d7a80ec895b93051b2b7a5c7fe8b080
+  tag: v1.6.1@sha256:30de5b8c5f8439820a3c2a0736805b3be3444b534fd0df2edc98c3abb2fc5cec
 
 service:
   main:

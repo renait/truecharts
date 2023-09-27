@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/clickhouse
   pullPolicy: IfNotPresent
-  tag: v23.7.5.30@sha256:cdc9db0a9e09bc93e2011257a64058e3fb8136816ede056b7c833d49d5cf5463
+  tag: v23.8.3.48@sha256:6dfb2322a26e5990b908cc3f49ceee230b241a67e791886ec76965df1a8aff11
 
 workload:
   main:

@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/zwavejs-ui
   pullPolicy: IfNotPresent
-  tag: v8.23.2@sha256:c03d7af20d59642cddc72e08eadd1bf59109b0bf6e7d606a29eaafcc98a36958
+  tag: v8.26.0@sha256:b91f1a2ec53b6566b032cdc03ffaac5d67e6be32f27cc80eb20e37ed4147e333
 service:
   main:
     ports:

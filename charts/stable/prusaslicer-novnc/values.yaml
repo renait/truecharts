@@ -1,7 +1,7 @@
 image:
   pullPolicy: IfNotPresent
   repository: tccr.io/truecharts/prusaslicer-novnc
-  tag: latest@sha256:79e71dcf965ce73debbe2bf34ba58aae07a90957e2c85185c7ad25afa4b47f04
+  tag: latest@sha256:a6ac216b5acf4cf264083a36e0d183ce8b735ce7b5c1f6e5e0534109ab68db8e
 persistence:
   configsfolder:
     enabled: true

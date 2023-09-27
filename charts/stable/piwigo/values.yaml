@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/piwigo
   pullPolicy: IfNotPresent
-  tag: v13.8.0@sha256:66f1040687932f8ed359c4c81e30dfe302917ed827cb8863633c2c099e983a91
+  tag: v13.8.0@sha256:7d492718e6b679606fe504eeef30b99646dbfbca27c806c883264d921f229845
 
 securityContext:
   container:

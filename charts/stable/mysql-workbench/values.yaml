@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/mysql-workbench
   pullPolicy: IfNotPresent
-  tag: v8.0.34@sha256:10f1d74f6987e04db7f3e15eff3adc2de8cacc175f9eb1d3b67296fba05e5407
+  tag: v8.0.34@sha256:6d0f40fec439f79f38e710619c9c4d9f44f733d1ff2c8c4a91e45f5eb322c4c3
 service:
   main:
     ports:

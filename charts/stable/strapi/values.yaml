@@ -1,6 +1,6 @@
 image:
   repository: tccr.io/truecharts/strapi
-  tag: v4.12.7@sha256:d448cfbc7a99367795861a47e025ec47082d922b9a4b52d2b62cbd811f1d28f6
+  tag: v4.13.7@sha256:d9ee683da99bac5098bc1b62099decba1d28e600b02e3a422ae7c9f28a5dc134
   pullPolicy: Always
 service:
   main:

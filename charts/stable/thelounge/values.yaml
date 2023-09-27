@@ -1,7 +1,7 @@
 image:
   repository: tccr.io/truecharts/thelounge
   pullPolicy: IfNotPresent
-  tag: v4.4.1@sha256:fbe99b6ce933e572f99f661203e895b3584482de2c2027aa17df0df834288958
+  tag: v4.4.1@sha256:fdebd36d2f502b73077efd29f13f6034fbb44431dbbbc14be6af01042b597e01
 service:
   main:
     ports:
